@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #007bff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Prediction Result</h1>
+        <p>Prediction using <span class="highlight">Logistic Regression:</span> {{ prediction_logreg }}</p>
+
+
+        
+        <p class="emoji">{{ '😢' if 'Lung Cancer' in prediction_logreg else '😊' }}</p>
+    </div>
+</body>
+</html>
